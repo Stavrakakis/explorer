@@ -20,6 +20,7 @@
     require.config({
         paths: {
             angular: 'lib/angular/angular',
+            angularUiRouter: 'lib/angular-ui-router/release/angular-ui-router',
             angularMocks: 'lib/angular-mocks/angular-mocks',
             text: 'lib/requirejs-text/text'
         },
@@ -27,6 +28,7 @@
             'angular': {
                 'exports': 'angular'
             },
+            'angularUiRouter': ['angular'],
             'angularMocks': {
                 deps: ['angular'],
                 'exports': 'angular.mock'
@@ -42,14 +44,14 @@
 
     require([
         'angular',
-        'app/insight-explorer'
+        'app/explorer'
     ], function(angular, app) {
 
         var $html = angular.element(document.getElementsByTagName('html')[0]);
 
         angular.element().ready(function() {
 
-            angular.bootstrap(document, ['insight.explorer']);
+            angular.bootstrap(document, ['explorer']);
         });
     });
 
