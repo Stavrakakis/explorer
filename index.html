@@ -12,9 +12,16 @@
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <![endif]-
         <!-- Add your site or application content here -->
-            <script data-main="require-config" src="lib/requirejs/require.js"></script>
+        
+        <ng-include src="'app/header/header.view.html'"></ng-include>
+        <ng-include src="'app/sidebar/sidebar.view.html'"></ng-include>
+        <main id="content">
+            
+        </main>
+        <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="zvy44ovo0jkzdy3"></script>
+        <script data-main="require-config" src="lib/requirejs/require.js"></script>
     </body>
 
 </html>
